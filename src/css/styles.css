@@ -4,13 +4,15 @@
   margin: 0;
   font-family: "Kumbh Sans";
   font-weight: 400;
+  box-sizing: border-box;
 }
 
 body {
   font-size: 12px;
   background: linear-gradient(hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 10rem 0 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,6 +68,7 @@ a {
   padding: 1rem 0;
   border-bottom: 2px solid hsl(240deg, 5%, 91%);
   color: hsl(240deg, 6%, 50%);
+  min-width: 316px;
 }
 .content ul li.active img {
   rotate: 180deg;
@@ -89,7 +92,7 @@ a {
 .content ul li .item-head h2 {
   font-size: 0.9rem;
 }
-.content ul li .item-head h2:hover {
+.content ul li:hover {
   color: hsl(14deg, 88%, 65%);
   cursor: pointer;
 }
@@ -102,9 +105,16 @@ a {
 }
 
 @media screen and (min-width: 1000px) {
+  body {
+    min-height: 100vh;
+    height: auto;
+    margin: 0 0 5rem;
+    padding: 0;
+  }
   main {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
     padding: 0;
     max-width: 1000px;
   }
@@ -121,7 +131,7 @@ a {
   }
   .illustration-woman {
     width: 110%;
-    height: 75%;
+    height: 400px;
     z-index: 1;
     bottom: 0;
     top: 0;
@@ -146,6 +156,9 @@ a {
   }
   .content h1 {
     text-align: left;
+  }
+  .content ul li {
+    min-width: 405px;
   }
 }
 
